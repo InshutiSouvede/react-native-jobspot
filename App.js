@@ -9,8 +9,8 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='login'>
-        <Stack.Screen component={SplashScreen} name="splash" />
+      <Stack.Navigator initialRouteName='splash'>
+        <Stack.Screen component={SplashScreen} name="splash" options={{headerShown: false}} />
         <Stack.Screen component={LoginScreen} name="login" options={{headerShown: false}} />
         <Stack.Screen component={SignUpScreen} name="signup" />
       </Stack.Navigator>

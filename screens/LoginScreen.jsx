@@ -2,10 +2,11 @@ import { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, Dimensions } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import CheckBox from 'expo-checkbox';
+import ButtonBlue from '../components/Button';
 
 const { height, width } = Dimensions.get("screen")
 
-export default function LoginScreen() {
+export default function LoginScreen({navigation}) {
   const [hidePassword, sethidePassword] = useState(true)
   const [isSelected, setSelection] = useState(false)
   const togglePassword = ()=>{
@@ -44,11 +45,19 @@ export default function LoginScreen() {
         </View>
       </View>
 
-      {/* <Text>Login Screen</Text>
-        <Text>Email</Text>
-        <TextInput placeholder='example@gmail.com' />
-        <Text>Password</Text>
-        <TextInput /> */}
+      <View>
+        <ButtonBlue bgColor="#130160">
+          <Text style={{color: "white", fontSize: 14, fontWeight: "700"}}>LOGIN</Text>
+        </ButtonBlue>
+        <ButtonBlue bgColor="#D6CDFE">
+          <Icon name='google' size={22} />
+          <Text style={{color: "#130160", marginLeft: 15, fontSize: 14, fontWeight: "700"}}>SIGN IN WITH GOOGLE</Text>
+        </ButtonBlue>
+      </View>
+      <View style ={styles.signup}>
+        <Text> You don't have an account yet?</Text>
+        <Text style={styles.link} onPress={()=>navigation.navigate('signup')} >Signup</Text>
+      </View>
     </View>
   )
 }
@@ -109,6 +118,17 @@ const styles = StyleSheet.create({
     flexDirection:'row',
   },
   checkbox:{
-    marginRight:10
+    marginRight:10,
+    backgroundColor:'#D6CDFE',
+    borderWidth:0
+  },
+  signup:{
+    flexDirection:'row',
+
+  },
+  link:{
+    color:'orange',
+    marginLeft:10
   }
+
 });
