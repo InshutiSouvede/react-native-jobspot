@@ -41,7 +41,7 @@ export default function LoginScreen({navigation}) {
              />
             <Text>Remember me</Text>
           </View>
-          <Text>Forgot password</Text>
+          <Text onPress={()=>navigation.navigate('forgotpassword')}>Forgot password</Text>
         </View>
       </View>
 
