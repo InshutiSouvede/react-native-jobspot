@@ -2,9 +2,9 @@ import { View, Dimensions,StyleSheet, Button, TouchableOpacity } from "react-nat
 
 const {height , width } =  Dimensions.get("screen");
 
-export default function ButtonBlue({children, bgColor}){
+export default function ButtonBlue({children, bgColor, onPress=()=>{}}){
     return(
-            <TouchableOpacity style={[styles.button, {backgroundColor: bgColor}]}>
+            <TouchableOpacity style={[styles.button, {backgroundColor: bgColor}]} onPress={onPress}>
                 {children}
             </TouchableOpacity>
         )

@@ -46,7 +46,7 @@ export default function LoginScreen({navigation}) {
       </View>
 
       <View>
-        <ButtonBlue bgColor="#130160">
+        <ButtonBlue bgColor="#130160" onPress={()=>{navigation.navigate("home")}}>
           <Text style={{color: "white", fontSize: 14, fontWeight: "700"}}>LOGIN</Text>
         </ButtonBlue>
         <ButtonBlue bgColor="#D6CDFE">
