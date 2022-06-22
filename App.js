@@ -18,7 +18,7 @@ export default function App() {
         <Stack.Screen component={SignUpScreen} name="signup" options={{headerShown: false}} />
         <Stack.Screen component={ForgotPassword} name="forgotpassword" options={{headerShown:false}}/>
         <Stack.Screen component={VerificationCode} name="verificationcode" options={{headerShown:false}} />
-        <Stack.Screen component={NewPassword} name="newpassword" />
+        <Stack.Screen component={NewPassword} name="newpassword" options={{headerShown: false}}/>
       </Stack.Navigator>
     </NavigationContainer>    
   );

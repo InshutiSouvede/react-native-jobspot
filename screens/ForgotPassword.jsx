@@ -20,11 +20,11 @@ export default function ForgotPassword({navigation}){
             </View>
             <View style={{marginLeft:15}}>
             <ButtonBlue bgColor={'#130160'}>
-                <Text style={{color:'white'}} onPress={()=>navigation.navigate('verificationcode')}>RESET PASSWORD</Text>
+                <Text style={{color:'white',fontWeight:'700'}} onPress={()=>navigation.navigate('verificationcode')}>RESET PASSWORD</Text>
                
             </ButtonBlue>
             <ButtonBlue bgColor={'#D6CDFE'}>
-                <Text style={{color:'white'}} onPress={()=>navigation.navigate('login')}>BACK TO LOGIN</Text>
+                <Text style={{color:'white',fontWeight:'700'}} onPress={()=>navigation.navigate('login')}>BACK TO LOGIN</Text>
             </ButtonBlue>
             </View>
             

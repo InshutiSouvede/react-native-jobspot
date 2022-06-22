@@ -18,10 +18,10 @@ export default function VerificationCode({navigation}){
             <Text style={{color:'#0D0140', fontWeight:'700'}}>Code:</Text>
             <TextInput style={styles.textInput} placeholder=" ex: 123-456"  secureTextEntry={false} />
             <ButtonBlue bgColor={'#0D0140'} >
-                <Text style={{color:'#fff'}}>NEXT</Text>
+                <Text onPress={()=>navigation.navigate('newpassword')} style={{color:'#fff',fontWeight:'700'}}>NEXT</Text>
             </ButtonBlue>
             <ButtonBlue bgColor={'#D6CDFE'}>
-                <Text onPress={()=>navigation.navigate('login')} style={{color:'#fff'}}>Cancel</Text>
+                <Text onPress={()=>navigation.navigate('login')} style={{color:'#fff',fontWeight:'700'}}>Cancel</Text>
             </ButtonBlue>
             <View style={styles.resendContainer}>
                 <Text>Have not recieved an email?</Text>
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         backgroundColor:'#fff',
         flex:1,
         alignItems:'center',
-        paddingTop:25,
+        paddingTop:height*0.06,
     },
     title:{
         marginVertical:25,
