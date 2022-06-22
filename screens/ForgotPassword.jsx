@@ -20,7 +20,7 @@ export default function ForgotPassword({navigation}){
             </View>
             <View style={{marginLeft:15}}>
             <ButtonBlue bgColor={'#130160'}>
-                <Text style={{color:'white'}}>RESET PASSWORD</Text>
+                <Text style={{color:'white'}} onPress={()=>navigation.navigate('verificationcode')}>RESET PASSWORD</Text>
                
             </ButtonBlue>
             <ButtonBlue bgColor={'#D6CDFE'}>
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
         height:50,
         width:width*0.7,
         padding:15,
-        marginVertical:10
+        marginVertical:10,
     },
     label:{
         fontWeight:'700',

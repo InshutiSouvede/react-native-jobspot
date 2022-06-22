@@ -36,7 +36,7 @@ export default function SignUpScreen({navigation}){
             value = {isSelected}
             onValueChange = {setIsSelected}
             />
-            <Text>Remember me</Text>
+            <Text style={{color:'#AAA6B9'}}>Remember me</Text>
           </View>
           </View>
           <View>
@@ -125,17 +125,21 @@ const styles = StyleSheet.create({
       alignItems:'center',
     },
     checkbox:{
-      marginRight:10
+      marginRight:10,
+      backgroundColor:'#D6CDFE',
+      borderWidth:0,
     },
     form:{
       borderWidth:0
     },
     texts:{
-      flexDirection:'row'
+      flexDirection:'row',
+      justifyContent:'center',
     },
     signin:{
       color:'orange',
       borderBottomColor:'orange',
-      marginLeft:10
+      marginLeft:10,      
+      borderBottomWidth:0.5
     },
   });

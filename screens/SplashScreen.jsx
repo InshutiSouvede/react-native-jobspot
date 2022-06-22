@@ -21,6 +21,7 @@ export default function SplashScreen({navigation}){
               <Icon name='arrow-right' color="white" size={26} />
             </TouchableOpacity>
           </View>
+          <Text style={{textAlign:'left'}}>Explore all the most exciting job roles based on your interest and study</Text>
         </View>
         </View>
     )

@@ -39,7 +39,7 @@ export default function LoginScreen({navigation}) {
             onValueChange = {setSelection}
              style = {styles.checkbox}
              />
-            <Text>Remember me</Text>
+            <Text style={{color:'#AAA6B9'}}>Remember me</Text>
           </View>
           <Text onPress={()=>navigation.navigate('forgotpassword')}>Forgot password</Text>
         </View>
@@ -124,11 +124,13 @@ const styles = StyleSheet.create({
   },
   signup:{
     flexDirection:'row',
-
+    justifyContent:'center',
   },
   link:{
     color:'orange',
-    marginLeft:10
+    marginLeft:10,
+    borderBottomColor:'orange',
+    borderBottomWidth:0.5,
   }
 
 });
