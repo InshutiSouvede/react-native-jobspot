@@ -30,7 +30,7 @@ export default function LoginScreen({navigation}) {
         <Text style={styles.inputLabel}>Password</Text>
         <View style={styles.inputContainer}>
           <TextInput style={styles.textInput} placeholder='' placeholderTextColor={"rgb(13, 1, 64)"} secureTextEntry={hidePassword}></TextInput>
-        <Icon name={hidePassword ? "eye-slash" : "eye"} size={30} onPress={togglePassword}></Icon>
+        <Icon name={hidePassword ? "eye-slash" : "eye"} size={24} onPress={togglePassword}></Icon>
         </View>
         <View style={styles.forgotContainer}>
           <View style={styles.rememberContainer}>
@@ -50,7 +50,7 @@ export default function LoginScreen({navigation}) {
           <Text style={{color: "white", fontSize: 14, fontWeight: "700"}}>LOGIN</Text>
         </ButtonBlue>
         <ButtonBlue bgColor="#D6CDFE">
-          <Icon name='google' size={22} />
+          <Icon name='google' size={20} />
           <Text style={{color: "#130160", marginLeft: 15, fontSize: 14, fontWeight: "700"}}>SIGN IN WITH GOOGLE</Text>
         </ButtonBlue>
       </View>
