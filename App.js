@@ -11,7 +11,7 @@ import HomeScreen from './screens/HomeScreen';
 import FilterScreen from './screens/FilterScreen';
 import Icon from 'react-native-vector-icons/FontAwesome';
 const Stack = createNativeStackNavigator();
-
+// Get icons from https://icons.expo.fyi/
 export default function App() {
   return (
     <NavigationContainer>
