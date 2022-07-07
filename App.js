@@ -9,12 +9,26 @@ import VerificationCode from './screens/VerificationCode';
 import ForgotPassword from './screens/ForgotPassword';
 import HomeScreen from './screens/HomeScreen';
 import FilterScreen from './screens/FilterScreen';
+import Icon from 'react-native-vector-icons/FontAwesome';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='filter'>
+      <Stack.Navigator initialRouteName='filter'
+        screenOptions={({route})=>{
+          tabBarIcon :({focused,color,size})=>{
+            let rn  = route.name;
+            let iconName;
+            if(rn === "login"){
+              iconName = focused? 'home':'home-outline'
+            }else{
+              iconName = focused? 'setting':'setting-outline'
+            }
+            return <Icon name={iconName} size = {size} color = {'orange'} />
+          }
+        }}
+      >
         <Stack.Screen component={SplashScreen} name="splash" options={{headerShown: false}} />
         <Stack.Screen component={LoginScreen} name="login" options={{headerShown: false}} />
         <Stack.Screen component={SignUpScreen} name="signup" options={{headerShown: false}} />

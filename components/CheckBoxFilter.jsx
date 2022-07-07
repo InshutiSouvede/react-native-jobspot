@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {  Text, TouchableOpacity, View } from 'react-native'
+import { Text, TouchableOpacity, View } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import CheckBox from "expo-checkbox"
 
@@ -21,9 +21,9 @@ const CheckBoxFilter = ({ title = "", options = [] }) => {
                         return <View key={option} style={{ flexDirection: "row", alignItems: "center", marginTop: 20 }}>
                             <CheckBox
                                 value={selected === option}
-                                onValueChange={(val)=>setselected(val ? option : null)}
+                                onValueChange={(val) => setselected(val ? option : null)}
                             />
-                            <Text style={{marginLeft: 10}}>{option}</Text>
+                            <Text style={{ marginLeft: 10 }}>{option}</Text>
                         </View>
                     })}
                 </View>
